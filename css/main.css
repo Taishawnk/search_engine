@@ -1,0 +1,112 @@
+
+html{
+    font-family: 'Rubik Gemstones', 'cursive';
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+}
+.container-homepage{
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr;
+    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+    margin-top:  5em;
+    justify-items: center;
+    align-items: center;
+    height: 100vh;
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+.homepage-logo{
+    grid-column: 2;
+    grid-row: 1;
+
+}
+
+.homepage-logo img{
+    width: 10.5rem;
+    
+}
+
+.searchbar{
+    grid-column:  1/-1;
+    grid-row: 2;
+}
+
+.searchbar input{
+    width: 66vw;
+    height: 5.8rem;
+    padding-left: 0.75em;
+    border: none;
+}
+.searchbar input[type=text]{
+/* [type=text] this protion lets us affect the actual text of the input without having to 
+drill in */
+    font-size: 1.5em;
+    font-family: 'Font Awesome\ 5 free', Arial, Helvetica, sans-serif;
+    /* also have to add the 'Font Awesome\ 5 free' for the font Awsome unicode to work
+     */
+    font-weight: 600;
+    color: #585858;
+    box-shadow: 2px 3px 20px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+}
+
+.searchbar input[type=text]::placeholder{
+    font-weight: 600;
+    font-family: 'Font Awesome\ 5 free', Arial, Helvetica, sans-serif;
+    color: #a4a4a4;
+}
+
+
+.searchbar p{
+    text-align: right;
+    color: #b3b3b3;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    margin: 2.3rem;
+}
+
+.searchbar input[type="text"]:focus {
+    outline: none;
+    box-shadow: 2px 3px 20px 1px  rgba(0, 0, 0, 0.3);
+
+}
+
+.recent-post-wrapper{
+    grid-column: 1/-1;
+    grid-row: 3;
+}
+
+.recentpost-heading{
+    color: #2660f3;
+    margin-bottom: 3rem;
+    font-size: 1.4rem;
+
+}
+.recentposts-wrapper{
+    display: grid;
+    width: 66vw;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    /* mix max allows for dinamic behavior for mobile without the need of
+    media quaies not always the best solution but for smaller apps deffenintly
+    and a combination of the 2 even better */
+    grid-gap: 2.5rem;
+
+}
+
+.post-title{
+    color: #535353;
+    font-size: 1.4rem;
+}
+.post-catagory{
+    color: #999999;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
